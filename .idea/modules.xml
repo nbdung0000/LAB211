@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/J1.L.P0021/J1.L.P0021.iml" filepath="$PROJECT_DIR$/J1.L.P0021/J1.L.P0021.iml" />
+      <module fileurl="file://$PROJECT_DIR$/J1.S.P0001/J1.S.P0001.iml" filepath="$PROJECT_DIR$/J1.S.P0001/J1.S.P0001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/J1.S.P0002/J1.S.P0002.iml" filepath="$PROJECT_DIR$/J1.S.P0002/J1.S.P0002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/J1.S.P0101/J1.S.P0101.iml" filepath="$PROJECT_DIR$/J1.S.P0101/J1.S.P0101.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LAB211.iml" filepath="$PROJECT_DIR$/.idea/LAB211.iml" />
+    </modules>
+  </component>
+</project>

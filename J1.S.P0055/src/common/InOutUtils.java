@@ -5,22 +5,22 @@ import java.util.Scanner;
 public class InOutUtils {
     private static final Scanner sc = new Scanner(System.in);
 
-    public static double inputDouble(String msg, int min, int max) {
-        double num = 0;
+    public static int inputInt(String msg, int min, int max) {
+        int num = 0;
         boolean isValid = false;
 
         do {
             try {
                 printMsg(msg);
-                num = sc.nextDouble();
+                num = sc.nextInt();
                 sc.nextLine();
                 if (num >= min && num <= max) {
                     isValid = true;
                 } else {
-                    printMsg("Please enter a number between 0 and 10.\n");
+                    printMsg("Please enter a number between " + min +" and "+max+".\n");
                 }
             } catch (Exception e) {
-                printMsg("Invalid input. Please enter a number.\n");
+                printMsg("Invalid input. Please enter an integer number.\n");
                 isValid = false;
                 sc.nextLine();
             }
@@ -31,12 +31,12 @@ public class InOutUtils {
     public static String inputString(String msg, int limit) {
         String str = "";
         boolean isValid = false;
-        while(!isValid){
+        while (!isValid) {
             printMsg(msg);
             str = sc.nextLine();
-            if (str.length() <= limit){
+            if (str.length() <= limit) {
                 isValid = true;
-            }else{
+            } else {
                 printMsg("Input string is too long. Please enter string less than " + limit + " characters in length.\n");
             }
         }

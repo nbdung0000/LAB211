@@ -20,14 +20,14 @@ public class StudentModel {
     public void inputStudent() {
         boolean continueInput = true;
         while (continueInput) {
-            String name = InOutUtils.inputString("Name: ");
-            String classes = InOutUtils.inputString("Classes: ");
+            String name = InOutUtils.inputString("Name: ",20);
+            String classes = InOutUtils.inputString("Classes: ",15);
             double math = InOutUtils.inputDouble("Maths: ", 0, 10);
             double chemistry = InOutUtils.inputDouble("Chemistry: ", 0, 10);
             double physics = InOutUtils.inputDouble("Physics: ", 0, 10);
             this.studentList.add(new Student(name, classes, math, chemistry, physics));
             InOutUtils.printMsg("Do you want to enter more student information?(Y/N): ");
-            String continueInputStr = InOutUtils.inputString("");
+            String continueInputStr = InOutUtils.inputString("",1);
             continueInput = continueInputStr.equalsIgnoreCase("Y");
         }
     }

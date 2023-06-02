@@ -7,6 +7,15 @@ import javax.print.Doc;
 import java.util.ArrayList;
 
 public class DoctorView {
+
+    public Doctor inputDoctor(){
+        Doctor doctor = new Doctor();
+        doctor.setCode(InOutUtils.inputString("Enter Code: ", 10));
+        doctor.setName(InOutUtils.inputString("Enter Name: ", 20));
+        doctor.setSpecialization(InOutUtils.inputString("Enter Specialization: ", 20));
+        doctor.setAvailability(InOutUtils.inputInt("Enter Availability: ", 0,Integer.MAX_VALUE));
+        return doctor;
+    }
     public void displayMenu(){
         InOutUtils.printMsg("========= Doctor Management ==========\n");
         InOutUtils.printMsg("1.Add Doctor.\n");

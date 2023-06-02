@@ -12,33 +12,12 @@ public class DoctorModel {
         doctorList = new ArrayList<>();
     }
 
-    private boolean isCodeValue(String code){
-        for(Doctor doctor: doctorList){
-            if(doctor.getCode().equalsIgnoreCase(code)){
-                return false;
-            }
-        }
-        return !code.isEmpty();
+    public ArrayList<Doctor> getDoctorList() {
+        return doctorList;
     }
 
-
-    public void addDoctor(){
-        Doctor doctor = new Doctor();
-        boolean checkCode = false;
-        String code = "";
-        while(!checkCode){
-            code = InOutUtils.inputString("Enter Code: ", 10);
-            checkCode = isCodeValue(code);
-            if(!checkCode){
-                InOutUtils.printMsg("Invalid code or duplicate code.\n");
-            }
-        }
-        doctor.setCode(code);
-        doctor.setName(InOutUtils.inputString("Enter Name: ", 20));
-        doctor.setSpecialization(InOutUtils.inputString("Enter Specialization: ", 20));
-        doctor.setAvailability(InOutUtils.inputInt("Enter Availability: ", 0,Integer.MAX_VALUE));
+    public void addDoctor(Doctor doctor){
         doctorList.add(doctor);
-        InOutUtils.printMsg("Doctor added successfully.\n");
     }
 
     private Doctor searchDoctorByCode(String code){
